@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 40px;
+  border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+}
+
+.title {
+  font-family: 'Orbitron', monospace;
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: linear-gradient(45deg, #8a2be2, #00ffff, #ff00ff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+}
+
+.balance {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 25px;
+  border-radius: 25px;
+  border: 1px solid rgba(138, 43, 226, 0.5);
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+}
+
+.balance-label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.balance-amount {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.currency {
+  color: #8a2be2;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+}

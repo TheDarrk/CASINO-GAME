@@ -1,0 +1,110 @@
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 2px solid rgba(138, 43, 226, 0.6);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  min-width: 400px;
+  box-shadow: 0 0 50px rgba(138, 43, 226, 0.5);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header h2 {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.winner-display {
+  margin: 20px 0;
+}
+
+.winner-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.prize-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.prize-label {
+  color: #888;
+}
+
+.prize-amount {
+  color: #00ff88;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.modal-btn {
+  background: linear-gradient(45deg, #8a2be2, #4b0082);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.modal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(138, 43, 226, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    min-width: 90%;
+    margin: 20px;
+    padding: 25px;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .winner-avatar {
+    width: 60px;
+    height: 60px;
+  }
+}

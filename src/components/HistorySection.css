@@ -1,0 +1,91 @@
+.history-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.history-list {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.history-empty {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  font-style: italic;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border-left: 4px solid #8a2be2;
+  transition: all 0.3s ease;
+}
+
+.history-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.history-item.beta {
+  border-left-color: #ff00ff;
+}
+
+.history-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.history-team {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.history-amount {
+  font-size: 0.9rem;
+  color: #00ff88;
+}
+
+.history-time {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.history-weight {
+  background: rgba(138, 43, 226, 0.3);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .history-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .history-amount,
+  .history-weight {
+    align-self: flex-end;
+  }
+}

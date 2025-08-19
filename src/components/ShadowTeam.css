@@ -1,0 +1,243 @@
+.shadow-team {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(138, 43, 226, 0.4);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.shadow-team::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(138, 43, 226, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shadow-team:hover::before {
+  opacity: 1;
+}
+
+.shadow-team:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  box-shadow: 0 20px 40px rgba(138, 43, 226, 0.3);
+}
+
+.shadow-team.leading {
+  z-index: 2;
+}
+
+/* Dynamic shadow effect */
+.dynamic-shadow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform-origin: center;
+  pointer-events: none;
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shadow-team.alpha .dynamic-shadow {
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.3) 0%, transparent 70%);
+}
+
+.shadow-team.beta .dynamic-shadow {
+  background: radial-gradient(circle, rgba(255, 0, 255, 0.3) 0%, transparent 70%);
+}
+
+/* Shadow Avatar Styles */
+.shadow-avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  position: relative;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, transparent 70%);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shadow-team.alpha .shadow-avatar {
+  box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+}
+
+.shadow-team.beta .shadow-avatar {
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.6);
+}
+
+.shadow-core {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #8a2be2 0%, #4b0082 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.shadow-team.beta .shadow-core {
+  background: radial-gradient(circle, #ff00ff 0%, #800080 100%);
+}
+
+.shadow-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.shadow-particles::before,
+.shadow-particles::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #8a2be2;
+  border-radius: 50%;
+  animation: particleFloat 3s ease-in-out infinite;
+}
+
+.shadow-team.beta .shadow-particles::before,
+.shadow-team.beta .shadow-particles::after {
+  background: #ff00ff;
+}
+
+.shadow-particles::before {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.shadow-particles::after {
+  top: 70%;
+  right: 15%;
+  animation-delay: 1.5s;
+}
+
+.team-name {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.bet-info {
+  margin-bottom: 25px;
+}
+
+.total-bet, .bet-count {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.amount, .count {
+  color: #00ff88;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.bet-input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bet-input input {
+  padding: 12px 15px;
+  border: 2px solid rgba(138, 43, 226, 0.4);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.bet-input input:focus {
+  outline: none;
+  border-color: rgba(138, 43, 226, 0.8);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+}
+
+.bet-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.alpha-btn {
+  background: linear-gradient(45deg, #8a2be2, #4b0082);
+  color: white;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+}
+
+.alpha-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(138, 43, 226, 0.6);
+}
+
+.beta-btn {
+  background: linear-gradient(45deg, #ff00ff, #800080);
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+}
+
+.beta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 0, 255, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shadow-team {
+    padding: 20px;
+  }
+  
+  .shadow-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .shadow-core {
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .team-name {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,15 @@
+.arena {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .arena {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
